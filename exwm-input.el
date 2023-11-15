@@ -311,7 +311,6 @@ ARGS are additional arguments to CALLBACK."
     (when (and                     ; this hook is called incesantly; place cheap tests on top
            (not (and (eq exwm-input--update-focus-window win)
                      (eq exwm-input--update-focus-window-buffer buf)))
-           (not (exwm-workspace--client-p))
            (exwm--terminal-p)      ; skip other terminals, e.g. TTY client frames
            (not (and (eq exwm-input--update-focus-window win)
                      (eq exwm-input--update-focus-window-buffer buf))))
